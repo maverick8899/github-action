@@ -10,4 +10,4 @@ jobs:
             - name: Set TODAY variable
               run: echo "TODAY=$(date +%Y-%m-%d)" >> $GITHUB_ENV
             - name: Say Hello
-              run: echo "Hello, world!"
+              run: echo Hello👋 today is $TODAY
