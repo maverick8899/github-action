@@ -5,7 +5,7 @@ on:
             - 'main'
 jobs:
     say-hello:
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-latest
         steps:
             - name: Say Hello
               run: echo "Hello, world!"
