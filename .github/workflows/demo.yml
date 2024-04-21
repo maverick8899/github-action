@@ -18,11 +18,15 @@ on:
             [opened, closed, reopened, synchronize, labeled, unlabeled]
             # paths:
             # branches:
-
 jobs:
     say-hello:
         runs-on: ubuntu-latest
         steps:
+            - uses: mheap/github-action-required-labels@v5
+              with:
+                  mode: exactly
+                  count: 0
+                  labels: 'do not merge'
             - name: Set TODAY variable
               run: echo "TODAY=$(date +%Y-%m-%d)" >> $GITHUB_ENV
             - name: Say Hello
