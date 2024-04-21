@@ -40,4 +40,4 @@ jobs:
             - name: hide ENV
               run: |
                   echo '::add-mask::$TODAY'
-                  echo today: $TODAYs
+                  echo today: $TODAY
