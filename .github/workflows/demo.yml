@@ -21,14 +21,14 @@ on:
 jobs:
     say-hello:
         runs-on: ubuntu-latest
-        permissions:
+        permissions: #? grant permissions for steps.uses
             contents: write
             pull-requests: write
             repository-projects: write
         steps:
             #? không cho phép pull request có bất kỳ nhãn nào trong danh sách labels.
             #? Nghĩa là nếu assigned label do not build sẽ k run ci
-            - uses: mheap/github-action-required-labels@v5
+            - uses: mheap/github-action-required-labels@v5 #* type of action
               with:
                   mode: exactly
                   count: 0
@@ -36,4 +36,4 @@ jobs:
             - name: Set TODAY variable
               run: echo "TODAY=$(date +%Y-%m-%d)" >> $GITHUB_ENV
             - name: Say Hello
-              run: echo Hello👋 today is $TODAY
+              run: echo Hello👋 today is $TODAY ${{secret.SECRET}}
