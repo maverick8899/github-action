@@ -37,3 +37,7 @@ jobs:
               run: echo "TODAY=$(date +%Y-%m-%d)" >> $GITHUB_ENV
             - name: Say Hello
               run: echo Hello👋 today is $TODAY ${{secrets.SECRET}}
+            - name: hide ENV
+              run: |
+                  echo '::add-mask::$TODAY'
+                  echo today: $TODAYs
