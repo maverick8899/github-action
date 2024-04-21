@@ -42,5 +42,5 @@ jobs:
                   echo '::add-mask::$TODAY'
             - name: Say Hello
               run: |
-                  echo Hello👋 today is $TODAYs 
+                  echo Hello👋 today is $TODAY
                   echo secret ${{secrets.SECRET}}
