@@ -35,7 +35,7 @@ jobs:
                   labels: 'do not build'
             - name: Set TODAY variable
               run: |
-                  echo '::add-mask::$TODAY'
                   echo "TODAY=$(date +%Y-%m-%d)" >> $GITHUB_ENV
+                  echo '::add-mask::$TODAY'
             - name: Say Hello
               run: echo Hello👋 today is $TODAYs ${{secrets.SECRET}}
