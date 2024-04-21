@@ -39,7 +39,7 @@ jobs:
               run: |
                   TODAY=$(date +%Y-%m-%d)
                   echo "TODAY=$TODAY" >> $GITHUB_ENV
-                  echo '::add-mask::$TODAY'
+                  echo "::add-mask::$TODAY" # Che giấu giá trị của TODAY
             - name: Say Hello
               run: |
                   echo Hello👋 today is $TODAY
