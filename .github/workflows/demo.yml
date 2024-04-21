@@ -21,6 +21,10 @@ on:
 jobs:
     say-hello:
         runs-on: ubuntu-latest
+        permissions:
+            contents: write
+            pull-requests: write
+            repository-projects: write
         steps:
             #? không cho phép pull request có bất kỳ nhãn nào trong danh sách labels.
             #? Nghĩa là nếu assigned label do not build sẽ k run ci
