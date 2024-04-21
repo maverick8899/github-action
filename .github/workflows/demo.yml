@@ -40,4 +40,5 @@ jobs:
             - name: hide ENV
               run: |
                   echo '::add-mask::$TODAY'
-                  echo today: $TODAY
+            - name: show hided ENV
+              run: 'echo today: $TODAYs'
